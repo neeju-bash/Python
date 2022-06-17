@@ -1,0 +1,7 @@
+l=list(range(1,10))
+print(l[-4:-2])
+name=["neeraj",1,2,3]
+print(name[0][3])
+dict={"neeraj":10,"aby":20}
+print(dict)
+print(dict["neeraj"])
