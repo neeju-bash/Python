@@ -1,0 +1,33 @@
+steps to connect mongodb
+
+pip install pymongo
+
+import pymongo on jupyter
+
+import pymongo
+
+And then connect to a Mongo client. This connects on the default host and port.
+
+client = pymongo.MongoClient(“mongodb://localhost:27017/”)
+
+We can then create a database to store some data. 
+
+db = client[“student_data”]
+Next, we can add a collection to that database. Each database can contain multiple collections. This collection will be called mark_data and we will reference the collection in Python using the variable my_collection.
+
+my_collection = db["mark_data"]
+
+add some data to the collection
+
+we can print the collection
+
+for item in my_collection.find():
+    print(item)
+    
+ Querying data
+There are several methods for querying data. All of the methods use the find() function. A query can be provided followed by the field or fields you wish to return in the form:
+
+collection.find({ <query> }, { <field(s)> })
+To find a single entry, for example the patient with the name “Darren Sanders” we could use the find function and print the first item in the list:
+
+pprint(my_collection.find({"Name": "Darren Sanders"})[0]
