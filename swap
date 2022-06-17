@@ -1,0 +1,5 @@
+a,b=3,6
+a,b=b,a
+
+print("a=%i"%a)
+print("b=%i"%b)
